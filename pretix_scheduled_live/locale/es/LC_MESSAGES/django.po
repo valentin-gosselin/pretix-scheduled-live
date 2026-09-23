@@ -1,0 +1,137 @@
+# Spanish translation for pretix-scheduled-live.
+# Copyright (C) 2026 Valentin Gosselin
+# This file is distributed under the same license as the pretix-scheduled-live package.
+#
+# Machine-assisted translation, not reviewed by a native speaker.
+# Corrections very welcome: https://github.com/valentin-gosselin/pretix-scheduled-live/issues
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pretix-scheduled-live 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-23 00:00+0000\n"
+"PO-Revision-Date: 2026-09-23 00:00+0000\n"
+"Last-Translator: Valentin Gosselin <valentin@gosselin.pro>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+
+#: pretix_scheduled_live/apps.py:15
+msgid "Scheduled shop publication"
+msgstr "Publicación programada de la tienda"
+
+#: pretix_scheduled_live/apps.py:19
+msgid "Schedule the exact date and time at which a ticket shop goes live, so it can be synchronised with scheduled publications on WordPress or social networks."
+msgstr "Programe la fecha y la hora exactas en que una tienda de entradas se publica, para poder sincronizarla con las publicaciones programadas en WordPress o en las redes sociales."
+
+#: pretix_scheduled_live/forms.py:17 pretix_scheduled_live/signals.py:54
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:6
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:5
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:8
+#: pretix_scheduled_live/transitions.py:48
+msgid "Scheduled publication"
+msgstr "Publicación programada"
+
+#: pretix_scheduled_live/forms.py:21
+msgid "Date and time, in the event timezone, at which the ticket shop should automatically go live. Leave empty to disable scheduled publication."
+msgstr "Fecha y hora, en la zona horaria del evento, a la que la tienda de entradas debe publicarse automáticamente. Déjelo vacío para desactivar la publicación programada."
+
+#: pretix_scheduled_live/services.py:59
+msgid "The event is in test mode."
+msgstr "El evento está en modo de prueba."
+
+#: pretix_scheduled_live/services.py:206
+#, python-brace-format
+msgid "Ticket shop “{event}” could not be published as scheduled"
+msgstr "La tienda «{event}» no ha podido publicarse según lo previsto"
+
+#: pretix_scheduled_live/signals.py:83
+msgctxt "timeline"
+msgid "The ticket shop goes live"
+msgstr "La tienda de entradas se publica"
+
+#: pretix_scheduled_live/signals.py:158
+msgid "A scheduled publication has been set for the shop."
+msgstr "Se ha definido una publicación programada para la tienda."
+
+#: pretix_scheduled_live/signals.py:159
+msgid "The scheduled publication of the shop has been cancelled."
+msgstr "Se ha cancelado la publicación programada de la tienda."
+
+#: pretix_scheduled_live/signals.py:161
+msgid "The shop could not be published at the scheduled time."
+msgstr "La tienda no ha podido publicarse a la hora prevista."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/mail_activation_failed.txt:1
+#, python-format
+msgid "Hello, the ticket shop for \"%(event)s\" was scheduled to go live, but we could not publish it."
+msgstr "Hola: la tienda de entradas de \"%(event)s\" debía publicarse, pero no hemos podido hacerlo."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/mail_activation_failed.txt:6
+msgid "Scheduled for:"
+msgstr "Programada para:"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/mail_activation_failed.txt:8
+msgid "Reasons:"
+msgstr "Motivos:"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/mail_activation_failed.txt:11
+msgid "The schedule has been kept: once the issues above are fixed, the shop will be published at the next run of the periodic task. You can also publish it manually, or cancel the schedule, here:"
+msgstr "La programación se mantiene: una vez corregidos los problemas anteriores, la tienda se publicará en la siguiente ejecución de la tarea periódica. También puede publicarla manualmente, o cancelar la programación, aquí:"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:11
+#, python-format
+msgid "This shop is scheduled to go live on %(date)s."
+msgstr "Esta tienda debe publicarse el %(date)s."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:17
+msgid "The shop is already live, so this schedule will have no effect."
+msgstr "La tienda ya está publicada, por lo que esta programación no tendrá ningún efecto."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:22
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:20
+msgid "The shop cannot go live at the moment. Unless the following issues are fixed before the scheduled date, it will not be published and your team will be notified by e-mail."
+msgstr "La tienda no puede publicarse en este momento. Si los siguientes problemas no se corrigen antes de la fecha programada, no se publicará y se avisará a su equipo por correo electrónico."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:39
+msgid "Change"
+msgstr "Modificar"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:43
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:51
+msgid "Cancel scheduled publication"
+msgstr "Cancelar la publicación programada"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:10
+msgid "Set the date and time at which this ticket shop should automatically go live. The shop stays completely invisible until then, which is what makes this different from the presale start date."
+msgstr "Defina la fecha y la hora a las que esta tienda de entradas debe publicarse automáticamente. Hasta entonces la tienda permanece completamente invisible: eso es lo que la diferencia de la fecha de inicio de la preventa."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:40
+msgid "Save"
+msgstr "Guardar"
+
+#: pretix_scheduled_live/views.py:73 pretix_scheduled_live/views.py:123
+msgid "Scheduled publication cancelled."
+msgstr "Publicación programada cancelada."
+
+#: pretix_scheduled_live/views.py:79
+msgid "Your shop is already live, the scheduled publication will have no effect."
+msgstr "Su tienda ya está publicada, la publicación programada no tendrá ningún efecto."
+
+#: pretix_scheduled_live/views.py:85
+msgid "The date you entered is in the past. The shop will be published at the next run of the periodic task."
+msgstr "La fecha introducida está en el pasado. La tienda se publicará en la siguiente ejecución de la tarea periódica."
+
+#: pretix_scheduled_live/views.py:90
+msgid "Scheduled publication saved."
+msgstr "Publicación programada guardada."
+
+#: pretix_scheduled_live/views.py:97
+msgid "The shop cannot go live at the moment. Unless you fix the following issues before the scheduled date, it will not be published and your team will be notified by e-mail."
+msgstr "La tienda no puede publicarse en este momento. Si no corrige los siguientes problemas antes de la fecha programada, no se publicará y se avisará a su equipo por correo electrónico."
+

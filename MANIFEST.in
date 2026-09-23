@@ -1,0 +1,10 @@
+include README.md
+include CHANGELOG.md
+include LICENSE
+include pyproject.toml
+
+recursive-include pretix_scheduled_live/templates *.html *.txt
+recursive-include pretix_scheduled_live/locale *.po *.mo
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

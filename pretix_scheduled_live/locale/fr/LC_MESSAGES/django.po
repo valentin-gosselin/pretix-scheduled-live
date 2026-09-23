@@ -1,0 +1,131 @@
+# French translation for pretix-scheduled-live.
+# Copyright (C) 2026 Valentin Gosselin
+# This file is distributed under the same license as the pretix-scheduled-live package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pretix-scheduled-live 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-23 18:55+0000\n"
+"PO-Revision-Date: 2026-09-23 00:00+0000\n"
+"Last-Translator: Valentin Gosselin <valentin@gosselin.pro>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: pretix_scheduled_live/apps.py:15
+msgid "Scheduled shop publication"
+msgstr "Mise en ligne programmée"
+
+#: pretix_scheduled_live/apps.py:19
+msgid "Schedule the exact date and time at which a ticket shop goes live, so it can be synchronised with scheduled publications on WordPress or social networks."
+msgstr "Programmez la date et l’heure exactes de mise en ligne d’une boutique, afin de la synchroniser avec les publications programmées sur WordPress ou les réseaux sociaux."
+
+#: pretix_scheduled_live/forms.py:17 pretix_scheduled_live/signals.py:54
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:6
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:5
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:8
+#: pretix_scheduled_live/transitions.py:48
+msgid "Scheduled publication"
+msgstr "Mise en ligne programmée"
+
+#: pretix_scheduled_live/forms.py:21
+msgid "Date and time, in the event timezone, at which the ticket shop should automatically go live. Leave empty to disable scheduled publication."
+msgstr "Date et heure, dans le fuseau horaire de l’événement, auxquelles la boutique doit être mise en ligne automatiquement. Laissez vide pour désactiver la mise en ligne programmée."
+
+#: pretix_scheduled_live/services.py:59
+msgid "The event is in test mode."
+msgstr "L’événement est en mode test."
+
+#: pretix_scheduled_live/services.py:206
+#, python-brace-format
+msgid "Ticket shop “{event}” could not be published as scheduled"
+msgstr "La boutique « {event} » n’a pas pu être mise en ligne comme prévu"
+
+#: pretix_scheduled_live/signals.py:83
+msgctxt "timeline"
+msgid "The ticket shop goes live"
+msgstr "La boutique est mise en ligne"
+
+#: pretix_scheduled_live/signals.py:158
+msgid "A scheduled publication has been set for the shop."
+msgstr "Une mise en ligne programmée a été définie pour la boutique."
+
+#: pretix_scheduled_live/signals.py:159
+msgid "The scheduled publication of the shop has been cancelled."
+msgstr "La mise en ligne programmée de la boutique a été annulée."
+
+#: pretix_scheduled_live/signals.py:161
+msgid "The shop could not be published at the scheduled time."
+msgstr "La boutique n’a pas pu être mise en ligne à l’heure prévue."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/mail_activation_failed.txt:1
+#, python-format
+msgid "Hello, the ticket shop for \"%(event)s\" was scheduled to go live, but we could not publish it."
+msgstr "Bonjour, la boutique de « %(event)s » devait être mise en ligne, mais nous n’avons pas pu le faire."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/mail_activation_failed.txt:6
+msgid "Scheduled for:"
+msgstr "Programmée pour :"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/mail_activation_failed.txt:8
+msgid "Reasons:"
+msgstr "Raisons :"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/mail_activation_failed.txt:11
+msgid "The schedule has been kept: once the issues above are fixed, the shop will be published at the next run of the periodic task. You can also publish it manually, or cancel the schedule, here:"
+msgstr "La programmation est conservée : une fois les problèmes ci-dessus corrigés, la boutique sera mise en ligne au prochain passage de la tâche périodique. Vous pouvez aussi la mettre en ligne manuellement, ou annuler la programmation, ici :"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:11
+#, python-format
+msgid "This shop is scheduled to go live on %(date)s."
+msgstr "Cette boutique doit être mise en ligne le %(date)s."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:17
+msgid "The shop is already live, so this schedule will have no effect."
+msgstr "La boutique est déjà en ligne, cette programmation n’aura donc aucun effet."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:22
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:20
+msgid "The shop cannot go live at the moment. Unless the following issues are fixed before the scheduled date, it will not be published and your team will be notified by e-mail."
+msgstr "La boutique ne peut pas être mise en ligne pour le moment. Si les problèmes suivants ne sont pas corrigés avant la date programmée, elle ne sera pas mise en ligne et votre équipe sera prévenue par e-mail."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:39
+msgid "Change"
+msgstr "Modifier"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/panel.html:43
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:51
+msgid "Cancel scheduled publication"
+msgstr "Annuler la mise en ligne programmée"
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:10
+msgid "Set the date and time at which this ticket shop should automatically go live. The shop stays completely invisible until then, which is what makes this different from the presale start date."
+msgstr "Définissez la date et l’heure auxquelles cette boutique doit être mise en ligne automatiquement. Jusque-là, la boutique reste totalement invisible : c’est ce qui la distingue de la date de début de prévente."
+
+#: pretix_scheduled_live/templates/pretix_scheduled_live/settings.html:40
+msgid "Save"
+msgstr "Enregistrer"
+
+#: pretix_scheduled_live/views.py:73 pretix_scheduled_live/views.py:123
+msgid "Scheduled publication cancelled."
+msgstr "Mise en ligne programmée annulée."
+
+#: pretix_scheduled_live/views.py:79
+msgid "Your shop is already live, the scheduled publication will have no effect."
+msgstr "Votre boutique est déjà en ligne, la mise en ligne programmée n’aura aucun effet."
+
+#: pretix_scheduled_live/views.py:85
+msgid "The date you entered is in the past. The shop will be published at the next run of the periodic task."
+msgstr "La date saisie est dans le passé. La boutique sera mise en ligne au prochain passage de la tâche périodique."
+
+#: pretix_scheduled_live/views.py:90
+msgid "Scheduled publication saved."
+msgstr "Mise en ligne programmée enregistrée."
+
+#: pretix_scheduled_live/views.py:97
+msgid "The shop cannot go live at the moment. Unless you fix the following issues before the scheduled date, it will not be published and your team will be notified by e-mail."
+msgstr "La boutique ne peut pas être mise en ligne pour le moment. Si vous ne corrigez pas les problèmes suivants avant la date programmée, elle ne sera pas mise en ligne et votre équipe sera prévenue par e-mail."

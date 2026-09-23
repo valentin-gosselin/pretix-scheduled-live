@@ -1,0 +1,48 @@
+{% load i18n %}
+<div class="panel {% if issues %}panel-warning{% else %}panel-info{% endif %} pretix-scheduled-live-panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="fa fa-clock-o" aria-hidden="true"></span>
+            {% trans "Scheduled publication" %}
+        </h3>
+    </div>
+    <div class="panel-body">
+        <p>
+            {% blocktrans trimmed with date=scheduled_for %}
+                This shop is scheduled to go live on {{ date }}.
+            {% endblocktrans %}
+        </p>
+        {% if already_live %}
+            <div class="alert alert-info">
+                {% trans "The shop is already live, so this schedule will have no effect." %}
+            </div>
+        {% elif issues %}
+            <div class="alert alert-warning">
+                <p>
+                    {% blocktrans trimmed %}
+                        The shop cannot go live at the moment. Unless the following issues are
+                        fixed before the scheduled date, it will not be published and your team
+                        will be notified by e-mail.
+                    {% endblocktrans %}
+                </p>
+                <ul>
+                    {% for issue in issues %}
+                        <li>{{ issue|safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <form action="{{ cancel_url }}" method="post" class="text-right flip">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next_url }}">
+            <a href="{{ settings_url }}" class="btn btn-default">
+                {% trans "Change" %}
+            </a>
+            <button type="submit" class="btn btn-default">
+                <span class="fa fa-times" aria-hidden="true"></span>
+                {% trans "Cancel scheduled publication" %}
+            </button>
+        </form>
+        <div class="clear"></div>
+    </div>
+</div>

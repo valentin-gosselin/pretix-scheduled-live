@@ -1,0 +1,15 @@
+{% load i18n %}{% blocktrans trimmed with event=event_name %}Hello,
+
+the ticket shop for "{{ event }}" was scheduled to go live, but we could not publish it.
+{% endblocktrans %}
+
+{% trans "Scheduled for:" %} {{ scheduled_for }}
+
+{% trans "Reasons:" %}
+{% for reason in reasons %}- {{ reason|striptags }}
+{% endfor %}
+{% blocktrans trimmed %}The schedule has been kept: once the issues above are fixed, the shop will be
+published at the next run of the periodic task. You can also publish it manually,
+or cancel the schedule, here:{% endblocktrans %}
+
+{{ live_url }}
